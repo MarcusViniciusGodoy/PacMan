@@ -91,6 +91,8 @@ void move(char direcao){
            break;
     }
     
+    system("clear");
+    
     if(!podeandar(&m, HEROI, proximo_x, proximo_y))
         return;
         
