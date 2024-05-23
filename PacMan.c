@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include "time.h"
 #include "PacMan.h"
 #include "mapa.h"
+#include "ui.h"
 
 MAPA m;
 POSICAO heroi;
@@ -60,10 +61,11 @@ int acabou(){
 }
 
 int ehdirecao(char direcao){
-     return direcao == 'a' || 
-     direcao == 'w' || 
-     direcao == 's' || 
-     direcao == 'd';
+     return 
+          direcao == ESQUERDA || 
+	  direcao == CIMA ||
+       	  direcao == BAIXO ||
+	  direcao == DIREITA;
 }
 
 void move(char direcao){
@@ -133,7 +135,7 @@ int main(){
     do{
     
        printf("Tem pilula: %s\n", (tempilula ? "SIM" : "NAO"));
-       imprime_mapa(&m);
+       imprimemapa(&m);
        
        char comando;
        scanf(" %c", &comando);

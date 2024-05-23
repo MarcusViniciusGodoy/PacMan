@@ -1,3 +1,6 @@
+#ifndef _MAPA_H_
+#define _MAPA_H_
+
 #define HEROI '@'
 #define FANTASMA 'F'
 #define VAZIO '.'
@@ -22,7 +25,6 @@ typedef struct posicao POSICAO;
 void libera_mapa(MAPA* m);
 void aloca_mapa(MAPA* m);
 void le_mapa(MAPA* m);
-void imprime_mapa(MAPA* m);
 int encontra_mapa(MAPA* m, POSICAO* p, char c);
 
 int ehvalida(MAPA* m, int x, int y);
@@ -32,4 +34,6 @@ void copiamapa(MAPA* destino, MAPA* origem);
 int podeandar(MAPA* m, char personagem, int x, int y);
 int ehparede(MAPA* m, int x, int y);
 int ehpersonagem(MAPA* m,char personagem, int x, int y);
+
+#endif
 
