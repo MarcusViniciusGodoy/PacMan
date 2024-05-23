@@ -1,6 +1,7 @@
 #define HEROI '@'
 #define FANTASMA 'F'
 #define VAZIO '.'
+#define PILULA 'P'
 #define PAREDE_VERTICAL '|'
 #define PAREDE_HORIZONTAL '-'
 
